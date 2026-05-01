@@ -1,0 +1,21 @@
+{
+  "name": "Todo",
+  "short_name": "Todo",
+  "description": "Lista de tarefas minimalista",
+  "id": "todo-pwa",
+  "start_url": "index.php",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "minimal-ui"],
+  "background_color": "#111827",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "screenshots": []
+}
