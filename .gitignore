@@ -1,2 +1,6 @@
 todo.sqlite
 .claude/
+config.php
+php_errors.log
+debug.log
+todo.sqlite.bak
