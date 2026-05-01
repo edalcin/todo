@@ -1,6 +1,6 @@
 todo.sqlite
 .claude/
-config.php
+.env
 php_errors.log
 debug.log
 todo.sqlite.bak

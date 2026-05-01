@@ -29,17 +29,17 @@ Um sistema de gerenciamento de tarefas (Todo/Kanban) simples, eficiente e auto-h
     ```
 
 2.  **Configure o ambiente:**
-    - Renomeie o arquivo `config.sample.php` para `config.php`:
+    - Crie um arquivo `.env` a partir do modelo:
       ```bash
-      cp config.sample.php config.php
+      cp .env.example .env
       ```
-    - Abra o `config.php` e altere o `PIN_CODE` para a sua senha de preferência:
-      ```php
-      define('PIN_CODE', 'SeuPinAqui');
+    - Abra o `.env` e altere o `PIN_CODE` para a sua senha de preferência:
+      ```text
+      PIN_CODE=SeuPinAqui
       ```
 
 3.  **Permissões de Escrita:**
-    Certifique-se de que o servidor web tenha permissão de escrita na pasta do projeto para criar e atualizar o arquivo `todo.sqlite` e os logs.
+    Certifique-se de que o servidor web tenha permissão de escrita na pasta do projeto para criar e atualizar o arquivo `todo.sqlite` e os logs. O arquivo `.env` também deve ser legível pelo servidor.
 
 4.  **Acesse no Navegador:**
     Aponte seu servidor para a pasta do projeto e acesse via `http://localhost/todo` (ou o endereço configurado).
@@ -53,8 +53,9 @@ Um sistema de gerenciamento de tarefas (Todo/Kanban) simples, eficiente e auto-h
 
 ## 🔒 Segurança
 
-- O arquivo `config.php` contém seu PIN e **não deve ser commitado** (já incluído no `.gitignore`).
-- O banco de dados `todo.sqlite` também está no `.gitignore` por padrão para evitar que seus dados pessoais sejam enviados para o repositório.
+- O arquivo `.env` contém seu PIN e **não deve ser commitado** (já incluído no `.gitignore`).
+- O arquivo `config.php` agora é seguro para ser commitado, pois carrega as informações do ambiente.
+- O banco de dados `todo.sqlite` também está no `.gitignore` por padrão.
 
 ## 📝 Licença
 
